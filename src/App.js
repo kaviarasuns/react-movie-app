@@ -28,73 +28,73 @@ function AddMovie(){
   }
     const INITIAL_MOVIE_LIST = [
 {
-name: "RRR",
+name: "Shutter Island",
 poster:
-"https://englishtribuneimages.blob.core.windows.net/gallary-content/2021/6/Desk/2021_6$largeimg_977224513.JPG",
-rating: 8.8,
+"https://flxt.tmsimg.com/assets/p3531967_p_v13_am.jpg",
+rating: 8.2,
 summary:
-"RRR is an upcoming Indian Telugu-language period action drama film directed by S. S. Rajamouli, and produced by D. V. V. Danayya of DVV Entertainments.",
+"In 1954, a U.S. Marshal investigates the disappearance of a murderer who escaped from a hospital for the criminally insane.",
 
 },
 {
-name: "Iron man 2",
+name: "Irandam Ulagaporin Kadaisi Gundu",
 poster:
-"https://m.media-amazon.com/images/M/MV5BMTM0MDgwNjMyMl5BMl5BanBnXkFtZTcwNTg3NzAzMw@@._V1_FMjpg_UX1000_.jpg",
-rating: 7,
-summary:
-"With the world now aware that he is Iron Man, billionaire inventor Tony Stark (Robert Downey Jr.) faces pressure from all sides to share his technology with the military. He is reluctant to divulge the secrets of his armored suit, fearing the information will fall into the wrong hands. With Pepper Potts (Gwyneth Paltrow) and Rhodes (Don Cheadle) by his side, Tony must forge new alliances and confront a powerful new enemy.",
-
-},
-{
-name: "No Country for Old Men",
-poster:
-"https://upload.wikimedia.org/wikipedia/en/8/8b/No_Country_for_Old_Men_poster.jpg",
+"https://m.media-amazon.com/images/M/MV5BNjZlNjgwZGUtYTdhOC00MWM0LWI5MWQtNTZkNzc5OTFjMWExXkEyXkFqcGdeQXVyODIwMDI1NjM@._V1_.jpg",
 rating: 8.1,
 summary:
-"A hunter's life takes a drastic turn when he discovers two million dollars while strolling through the aftermath of a drug deal. He is then pursued by a psychopathic killer who wants the money.",
+"A lorry driver ends up in possession of an unexploded bomb that is being sought after by both the cops and pro-peace activists.",
 
 },
 {
-name: "Jai Bhim",
+name: "12 Years a Slave",
 poster:
-"https://m.media-amazon.com/images/M/MV5BY2Y5ZWMwZDgtZDQxYy00Mjk0LThhY2YtMmU1MTRmMjVhMjRiXkEyXkFqcGdeQXVyMTI1NDEyNTM5._V1_FMjpg_UX1000_.jpg",
+"https://m.media-amazon.com/images/M/MV5BMjExMTEzODkyN15BMl5BanBnXkFtZTcwNTU4NTc4OQ@@._V1_FMjpg_UX1000_.jpg",
 summary:
-"A tribal woman and a righteous lawyer battle in court to unravel the mystery around the disappearance of her husband, who was picked up the police on a false case",
-rating: 8.8,
+"In the antebellum United States, Solomon Northup, a free black man from upstate New York, is abducted and sold into slavery.",
+rating: 8.1,
 
 },
 {
-name: "The Avengers",
-rating: 8,
+name: "8 Thottakkal",
+rating: 7.5,
 summary:
-"Marvel's The Avengers (classified under the name Marvel Avengers\n Assemble in the United Kingdom and Ireland), or simply The Avengers, is\n a 2012 American superhero film based on the Marvel Comics superhero team\n of the same name.",
+"A depressed and loyal policeman loses his gun to a killer, who kills people due the circumstances of his life.",
 poster:
-"https://terrigen-cdn-dev.marvel.com/content/prod/1x/avengersendgame_lob_crd_05.jpg",
+"https://m.media-amazon.com/images/M/MV5BMDkwNmMwMDgtZDA3YS00MWExLWI4ODItNjc2Njk2YTg3NjBhXkEyXkFqcGdeQXVyODk4ODEyMjk@._V1_.jpg",
 
 },
 {
-name: "Interstellar",
-poster: "https://m.media-amazon.com/images/I/A1JVqNMI7UL._SL1500_.jpg",
-rating: 8.6,
+name: "The Butterfly Effect",
+poster: "https://m.media-amazon.com/images/M/MV5BODNiZmY2MWUtMjFhMy00ZmM2LTg2MjYtNWY1OTY5NGU2MjdjL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg",
+rating: 7.6,
 summary:
-"When Earth becomes uninhabitable in the future, a farmer and ex-NASA\n pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team\n of researchers, to find a new planet for humans.",
+"Evan Treborn suffers blackouts during significant events of his life. As he grows up, he finds a way to remember these lost memories and a supernatural way to alter his life by reading his journal.",
 
 },
 {
-name: "Baahubali",
-poster: "https://flxt.tmsimg.com/assets/p11546593_p_v10_af.jpg",
-rating: 8,
+name: "Lucifer",
+poster: "https://i.pinimg.com/originals/26/13/ae/2613ae6cf3bf049cfc92f212add0a900.jpg",
+rating: 7.5,
 summary:
-"In the kingdom of Mahishmati, Shivudu falls in love with a young warrior woman. While trying to woo her, he learns about the conflict-ridden past of his family and his true legacy.",
+"A political Godfather dies and a lot of thieves dressed up as politicians took over the rule. Question arises regarding the successor of the God, unfolding few names, along with the God's most beloved angel, Lucifer.",
 
 },
 {
-name: "Ratatouille",
+name: "The Platform",
 poster:
-"https://resizing.flixster.com/gL_JpWcD7sNHNYSwI1ff069Yyug=/ems.ZW1zLXByZC1hc3NldHMvbW92aWVzLzc4ZmJhZjZiLTEzNWMtNDIwOC1hYzU1LTgwZjE3ZjQzNTdiNy5qcGc=",
-rating: 8,
+"https://cdn.traileraddict.com/content/netflix/the-platform-poster.jpg",
+rating: 7.0,
 summary:
-"Remy, a rat, aspires to become a renowned French chef. However, he fails to realise that people despise rodents and will never enjoy a meal cooked by him.",
+"A mysterious place, an indescribable prison, a deep hole. An unknown number of levels. Two inmates living on each level. A descending platform containing food for all of them. An inhuman fight for survival, but also an opportunity for solidarity.",
+
+},
+{
+name: "Kadaseela Biriyani",
+poster:
+"https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d8e031f5-1ee9-4dc9-8d52-851ce4adc93d/dev4uv8-7c939013-6511-48e9-bcc4-4aa7f64566c1.jpg/v1/fill/w_1280,h_1968,q_75,strp/kadaseela_biriyani___audio_release_poster_by_sivadigitalart_dev4uv8-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTk2OCIsInBhdGgiOiJcL2ZcL2Q4ZTAzMWY1LTFlZTktNGRjOS04ZDUyLTg1MWNlNGFkYzkzZFwvZGV2NHV2OC03YzkzOTAxMy02NTExLTQ4ZTktYmNjNC00YWE3ZjY0NTY2YzEuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.qtlHFAFbBOvjg1UxCnXM7NO8NKSZ_Sp7Yo49aoBdGHY",
+rating: 7.5,
+summary:
+"Hoping to avenge their father's death, a trio of brothers break into the local landlord's rubber estate. What begins as an idyllic plan quickly devolves into an increasingly bizarre and violent survival chase at the hands of the landlord's maniac son.",
 
 }
 ];
@@ -102,15 +102,13 @@ summary:
   
     return(
       <div className='movie-list'>
-        <div>
-        <div><input  onChange={(ele) => setName(ele.target.value)} placeholder='Name'></input></div>
-        <div><input onChange={(ele) => setPoster(ele.target.value)} placeholder='Poster'></input></div>
-        <div><input onChange={(ele) => setRating(ele.target.value)} placeholder='Rating'></input></div>
-        <div><input onChange={(ele) => setSummary(ele.target.value)} placeholder='Summary'></input></div> 
-        <button onClick={() => setaddMovieList([...movieList,addMovieList])}>Add Movie</button>
+        <div className='movie-div'>
+        <div><input className='add-movie' onChange={(ele) => setName(ele.target.value)} placeholder='Name'></input></div>
+        <div><input className='add-movie' onChange={(ele) => setPoster(ele.target.value)} placeholder='Poster'></input></div>
+        <div><input className='add-movie' onChange={(ele) => setRating(ele.target.value)} placeholder='Rating'></input></div>
+        <div><input className='add-movie' onChange={(ele) => setSummary(ele.target.value)} placeholder='Summary'></input></div> 
+        <button className="add-movie-button"onClick={() => setaddMovieList([...movieList,addMovieList])}>Add Movie</button>
         </div>
-
-
         {movieList.map((mv,index) => (<Movie key={index} movie={mv}/>))}
       </div>
     );

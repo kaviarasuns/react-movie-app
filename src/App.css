@@ -43,6 +43,28 @@
   justify-content: space-around;
 }
 
-.add-movie{
-  height: 20px;
+.movie-div{
+  height: 500px;
 }
+.add-movie{
+  height: 50px;
+  width: 200px;
+  margin-top: 20px;
+  border-color: rgba(0, 0, 0, 0.63);
+}
+
+.add-movie:hover{
+  border-color: rgba(0, 0, 0, 0.767);
+}
+
+.add-movie-button{
+  background-color: deepskyblue;
+  margin-top: 20px;
+  height: 30px;
+  width: 200px;
+}
+
+.add-movie-button:hover{
+  background-color: blue;
+}
+
