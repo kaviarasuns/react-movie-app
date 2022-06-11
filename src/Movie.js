@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Counter } from "./Counter";
 
-export function Movie({ movie, id }) {
+export function Movie({ movie, id, movieList, setMovieList }) {
   const styles = {
     color: movie.rating > 8 ? "green" : "red",
   };
