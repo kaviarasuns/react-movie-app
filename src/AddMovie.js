@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 
 export function AddMovie({movieList, setMovieList}){
@@ -18,10 +19,10 @@ export function AddMovie({movieList, setMovieList}){
     }
 return(
 <div className="add-movie-form">
-    <input placeholder='Name' onChange={(ele) => setName(ele.target.value)}></input>
-    <input placeholder='Poster' onChange={(ele) => setPoster(ele.target.value)}></input>
-    <input placeholder='Rating' onChange={(ele) => setRating(ele.target.value)}></input>
-    <input placeholder='Summary' onChange={(ele) => setSummary(ele.target.value)}></input>
+    <TextField id="standard-basic" label="Name" variant="standard" onChange={(ele) => setName(ele.target.value)}/>
+    <TextField id="standard-basic" label="Poster" variant="standard" onChange={(ele) => setPoster(ele.target.value)}/>
+    <TextField id="standard-basic" label="Rating" variant="standard" onChange={(ele) => setRating(ele.target.value)}/>
+    <TextField id="standard-basic" label="Summary" variant="standard"  onChange={(ele) => setSummary(ele.target.value)}/>
     <Button onClick={addMovie} variant="contained">Add Movie</Button>
   </div> 
 )

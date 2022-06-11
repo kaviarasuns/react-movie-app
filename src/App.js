@@ -6,13 +6,19 @@ import { AddColor } from './AddColor';
 import { Home } from './Home';
 import { NotFound } from './NotFound';
 import logo from './logo.svg';
-import { Routes, Route, Link, Navigate } from "react-router-dom";
+import { Routes, Route, Link, Navigate, useNavigate } from "react-router-dom";
 import './App.css';
 import { MovieDetails } from './MovieDetails';
 import { useState } from 'react';
 import { Movie } from './Movie';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
 export default App;
-
 
 
 
@@ -79,22 +85,14 @@ function App() {
   const [movieList, setMovieList] = useState(INITIAL_MOVIE_LIST)
   return (
     <div>
-      <nav>
-        <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/color-game">Color Game</Link>
-        </li>
-        <li>
-          <Link to="/movies">Movies</Link>
-        </li>
-        <li>
-          <Link to="/add-movies">Add Movies</Link>
-        </li>
-        </ul>
-      </nav>
+       <AppBar position="static">
+        <Toolbar>
+          <Button color="inherit"><Link to="/">Home</Link></Button>
+          <Button color="inherit"><Link to="/movies">Movies</Link></Button>
+          <Button color="inherit"><Link to="/add-movies">Add Movies</Link></Button>
+          <Button color="inherit"><Link to="/color-game">Color Game</Link></Button>
+        </Toolbar>
+      </AppBar>
     <Routes>
         <Route path="/" element={<Home />} />
         <Route path="color-game" element={<AddColor />} />
