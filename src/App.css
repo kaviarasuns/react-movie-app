@@ -46,16 +46,8 @@
 .movie-div{
   height: 500px;
 }
-.add-movie{
-  height: 50px;
-  width: 200px;
-  margin-top: 20px;
-  border-color: rgba(0, 0, 0, 0.63);
-}
 
-.add-movie:hover{
-  border-color: rgba(0, 0, 0, 0.767);
-}
+
 
 .add-movie-button{
   background-color: deepskyblue;
@@ -64,7 +56,9 @@
   width: 200px;
 }
 
-.add-movie-button:hover{
-  background-color: blue;
+.add-movie-form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+  padding: 24px;
 }
-
