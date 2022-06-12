@@ -93,7 +93,8 @@ function App() {
           <Button color="inherit"><Link to="/color-game">Color Game</Link></Button>
         </Toolbar>
       </AppBar>
-    <Routes>
+        <section className="route-container">
+        <Routes>
         <Route path="/" element={<Home />} />
         <Route path="color-game" element={<AddColor />} />
 
@@ -107,7 +108,8 @@ function App() {
         
         <Route path="/404" element={<NotFound/>}></Route>
         <Route path="*" element={<Navigate replace to="/404" />}/>
-      </Routes>
+       </Routes>
+      </section>
     </div> 
   );
 

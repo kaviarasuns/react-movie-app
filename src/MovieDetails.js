@@ -1,5 +1,10 @@
 import { Navigate, useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import SendIcon from '@mui/icons-material/Send';
+import Stack from '@mui/material/Stack';
 
 export function MovieDetails({movieList}) {
   const { id } = useParams();
@@ -32,7 +37,13 @@ export function MovieDetails({movieList}) {
         </div>
         <p className="movie-summary">{movie.summary}</p>
       </div>
-      <button onClick={()=> navigate(-1)}>Back</button>
+      
+      <Button onClick={()=> navigate(-1)} variant="outlined" startIcon={<ArrowBackIosIcon />}>
+        Back
+      </Button>
+      
+      {/* <button onClick={()=> navigate(-1)}>Back</button> */}
+      
     </div>
   );
 }
