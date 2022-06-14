@@ -1,13 +1,16 @@
 import Badge from '@mui/material/Badge';
 import {AddMovie} from './AddMovie';
 import {MovieList} from './MovieList';
+import Paper from '@mui/material/Paper';
 import {Counter} from './Counter'
 import { AddColor } from './AddColor';
 import { Home } from './Home';
 import { NotFound } from './NotFound';
+import { TicTacToe } from './TicTacToe';
 import logo from './logo.svg';
 import { Routes, Route, Link, Navigate, useNavigate } from "react-router-dom";
 import './App.css';
+import './tictactoe.css';
 import { MovieDetails } from './MovieDetails';
 import { useState } from 'react';
 import { Movie } from './Movie';
@@ -18,7 +21,10 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 export default App;
+
+
 
 
 
@@ -81,16 +87,31 @@ function App() {
       trailer: "https://www.youtube.com/embed/U7zJwUFwoxg",
     }
   ];
-
   const [movieList, setMovieList] = useState(INITIAL_MOVIE_LIST)
+
+  const [theme, setTheme] = useState(true);
+
+  const darkTheme = createTheme({
+  palette: {
+    mode: theme ? 'light' : 'dark',
+  },
+});
+
+const navigate = useNavigate();
+  
   return (
+     <ThemeProvider theme={darkTheme}>
+     <Paper elevation={4} style={{minHeight: "100vh", borderRadius: "0px"}}>
     <div>
        <AppBar position="static">
         <Toolbar>
-          <Button color="inherit"><Link to="/">Home</Link></Button>
-          <Button color="inherit"><Link to="/movies">Movies</Link></Button>
-          <Button color="inherit"><Link to="/add-movies">Add Movies</Link></Button>
-          <Button color="inherit"><Link to="/color-game">Color Game</Link></Button>
+          <Button color="inherit" onClick={() => navigate("/")}>Home</Button>
+          <Button color="inherit" onClick={() => navigate("/movies")}>Movies</Button>
+          <Button color="inherit" onClick={() => navigate("/add-movies")}>Add Movies</Button>
+          <Button color="inherit" onClick={() => navigate("/color-game")}>Color Game</Button>
+          <Button color="inherit" onClick={() => navigate("/tic-tac-toe")}> Tic Tac Toe</Button>
+          <Button color="inherit" onClick={() => setTheme(!theme)}>Theme</Button>
+
         </Toolbar>
       </AppBar>
         <section className="route-container">
@@ -102,6 +123,7 @@ function App() {
 
         <Route path="/add-movies" element={<AddMovie movieList={movieList} setMovieList={setMovieList}/>}/>
 
+        <Route path="tic-tac-toe" element={<TicTacToe />} />
 
         {/* <Route path="/films" element={<Navigate replace to="/movies"/>} /> */}
         <Route path="/movies/:id" element={<MovieDetails movieList={movieList}/>} />
@@ -110,10 +132,11 @@ function App() {
         <Route path="*" element={<Navigate replace to="/404" />}/>
        </Routes>
       </section>
-    </div> 
+    </div>
+    </Paper>
+    </ThemeProvider> 
   );
 
 }
-
 
 
