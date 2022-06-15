@@ -47,18 +47,13 @@ const handleClick = (index) => {
         // changing turn
         setIsXTurn(!isXTurn);
     }
-
-    const boardReset = () => {
-        setBoard([null,null,null,null,null,null,null,null,null]);
-    }
-
     
 }
     return(
         <div className="board">
         {board.map((val, index) => <GameBox val={val} onPlayerClick={()=> handleClick(index)}/>)}
         <h2>Winner is: {winner}</h2>
-        <button>Restart</button>
+        <button onClick={() => setBoard([null,null,null,null,null,null,null,null,null])}>Restart</button>
         </div>
     )
 }
