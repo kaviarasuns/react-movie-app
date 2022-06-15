@@ -1,10 +1,12 @@
 import { useState } from "react"
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 export function TicTacToe(){
 
   return(
     <div>
-      <h1>Fun Game</h1>
+      <h1>TicTacToe Game</h1>
     <Board/>  
     </div>
   )
@@ -53,7 +55,7 @@ const handleClick = (index) => {
         <div className="board">
         {board.map((val, index) => <GameBox val={val} onPlayerClick={()=> handleClick(index)}/>)}
         <h2>Winner is: {winner}</h2>
-        <button onClick={() => setBoard([null,null,null,null,null,null,null,null,null])}>Restart</button>
+        <Button onClick={() => setBoard([null,null,null,null,null,null,null,null,null])} variant="text">Restart</Button>
         </div>
     )
 }
@@ -75,3 +77,11 @@ function GameBox({val, onPlayerClick}){
         >{val}</div>
     )
 } 
+
+function Confetti(){
+
+
+    return(
+    <h1> Hello</h1>
+    )
+}
