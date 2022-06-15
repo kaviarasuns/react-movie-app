@@ -52,10 +52,12 @@ const handleClick = (index) => {
     
 }
     return(
+        <div>
         <div className="board">
         {board.map((val, index) => <GameBox val={val} onPlayerClick={()=> handleClick(index)}/>)}
         <h2>Winner is: {winner}</h2>
-        <Button onClick={() => setBoard([null,null,null,null,null,null,null,null,null])} variant="text">Restart</Button>
+        </div>
+         <Button onClick={() => setBoard([null,null,null,null,null,null,null,null,null])} variant="contained">Restart</Button>
         </div>
     )
 }
