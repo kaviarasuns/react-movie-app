@@ -1,6 +1,7 @@
 import Badge from '@mui/material/Badge';
 import {AddMovie} from './AddMovie';
 import {MovieList} from './MovieList';
+import { EditMovie } from './EditMovie';
 import Paper from '@mui/material/Paper';
 import {Counter} from './Counter'
 import { AddColor } from './AddColor';
@@ -22,6 +23,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { BasicForm } from './BasicForm';
 export default App;
 
 
@@ -118,6 +120,9 @@ const navigate = useNavigate();
           <Button color="inherit" onClick={() => navigate("/add-movies")}>Add Movies</Button>
           <Button color="inherit" onClick={() => navigate("/color-game")}>Color Game</Button>
           <Button color="inherit" onClick={() => navigate("/tic-tac-toe")}> Tic Tac Toe</Button>
+          
+          
+          
           <Button color="inherit" onClick={() => setTheme(!theme)}>Theme</Button>
 
         </Toolbar>
@@ -127,17 +132,21 @@ const navigate = useNavigate();
         <Route path="/" element={<Home />} />
         <Route path="color-game" element={<AddColor />} />
 
-        <Route path="/movies" element={<MovieList movieList={movieList} setMovieList={setMovieList}/>} />
+        <Route path="/movies" element={<MovieList/>} />
 
-        <Route path="/add-movies" element={<AddMovie movieList={movieList} setMovieList={setMovieList}/>}/>
+        <Route path="/add-movies" element={<AddMovie/>}/>  
 
-        <Route path="tic-tac-toe" element={<TicTacToe />} />
+        <Route path="/tic-tac-toe" element={<TicTacToe />} />
+
+        <Route path="/movies/edit/:id" element={<EditMovie />} />
 
         {/* <Route path="/films" element={<Navigate replace to="/movies"/>} /> */}
-        <Route path="/movies/:id" element={<MovieDetails movieList={movieList}/>} />
+        <Route path="/movies/:id" element={<MovieDetails />} />
         
         <Route path="/404" element={<NotFound/>}></Route>
-        <Route path="*" element={<Navigate replace to="/404" />}/>
+        {/* <Route path="*" element={<Navigate replace to="/404" />}/> */}
+
+        <Route path="/basic-form" element={<BasicForm/>}></Route>
        </Routes>
       </section>
     </div>

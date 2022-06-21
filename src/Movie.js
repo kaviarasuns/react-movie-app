@@ -14,8 +14,9 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from '@mui/icons-material/Edit';
 
-export function Movie({ mv, movie, id, movieList, setMovieList }) {
+export function Movie({mv ,movie, id, movieList, setMovieList, getMovies }) {
   const styles = {
     color: movie.rating > 8 ? "green" : "red",
   };
@@ -28,17 +29,21 @@ export function Movie({ mv, movie, id, movieList, setMovieList }) {
 
   const navigate = useNavigate();
 
+  // const deleteMovie = () => {
+  //   setMovieList(movieList.filter((ele) => ele.id !== movie.id));
+  // };
+
   const deleteMovie = () => {
-    setMovieList(movieList.filter((ele) => ele.id !== movie.id));
-    console.log(movieList);
-  };
+    fetch(`https://62a970b0ec36bf40bdb78a88.mockapi.io/movies/${movie.id}`,{ method: "DELETE",})
+    .then(() => getMovies( ));
+  }
 
   return (
     <Card className="movie-container" sx={{ height: "min-content" }}>
       <img src={movie.poster} alt={movie.name} className="movie-poster" />
       <CardContent>
         <div className="movie-specs">
-          <h2 className="movie-name">
+          <h2 className="movie-name"> 
             {movie.name}
             <IconButton
               color="primary"
@@ -76,6 +81,15 @@ export function Movie({ mv, movie, id, movieList, setMovieList }) {
               onClick={deleteMovie}
               className="delete-icon"
               color="error"
+            />
+          </Badge>
+        </IconButton>
+        <IconButton color="primary" aria-label="Movie details">
+          <Badge color="error">
+            <EditIcon
+              onClick={() => navigate(`/movies/edit/${movie.id}`)}
+              className="edit-icon"
+              color="success"
             />
           </Badge>
         </IconButton>
