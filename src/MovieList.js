@@ -1,11 +1,12 @@
 import {useState, useEffect} from 'react';
 import { Movie } from "./Movie";
+import { API } from "./global.js"
 
 export function MovieList() {
   const [movieList, setMovieList] = useState([]);
 
   const getMovies = () => {
-    fetch("https://62a970b0ec36bf40bdb78a88.mockapi.io/movies", {
+    fetch(`${API}/movies`, {
       method:"GET",
     })
     .then((data) => data.json())
@@ -13,6 +14,9 @@ export function MovieList() {
   }
 
   useEffect(()=> getMovies(),[])
+
+  // This code will call too many requests without useEffect
+  // getMovies();
 
   return (
     <div>

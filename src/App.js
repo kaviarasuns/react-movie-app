@@ -123,7 +123,7 @@ const navigate = useNavigate();
           
           
           
-          <Button color="inherit" onClick={() => setTheme(!theme)}>Theme</Button>
+          <Button style={{marginLeft:"auto"}}color="inherit" onClick={() => setTheme(!theme)}>Theme</Button>
 
         </Toolbar>
       </AppBar>

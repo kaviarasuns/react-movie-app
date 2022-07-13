@@ -15,6 +15,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from '@mui/icons-material/Edit';
+import { API } from "./global.js"
 
 export function Movie({mv ,movie, id, movieList, setMovieList, getMovies }) {
   const styles = {
@@ -34,7 +35,7 @@ export function Movie({mv ,movie, id, movieList, setMovieList, getMovies }) {
   // };
 
   const deleteMovie = () => {
-    fetch(`https://62a970b0ec36bf40bdb78a88.mockapi.io/movies/${movie.id}`,{ method: "DELETE",})
+    fetch(`${API}/movies/${movie.id}`,{ method: "DELETE",})
     .then(() => getMovies( ));
   }
 
@@ -75,7 +76,7 @@ export function Movie({mv ,movie, id, movieList, setMovieList, getMovies }) {
 
       <CardActions>
         <Counter />
-        <IconButton color="primary" aria-label="Movie details">
+        <IconButton style={{marginLeft: "auto"}} color="primary" aria-label="Movie details">
           <Badge color="error">
             <DeleteIcon
               onClick={deleteMovie}

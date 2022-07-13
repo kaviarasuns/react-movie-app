@@ -4,6 +4,7 @@ import TextField from '@mui/material/TextField';
 import { useNavigate } from "react-router-dom";
 import { useFormik } from 'formik';
 import * as yup from "yup";
+import { API } from "./global.js"
 
 const movieValidationSchema = yup.object({
       name: yup.string().required("Why not fill this name?"), 
@@ -50,7 +51,7 @@ export function AddMovie(){
     // };
     // setMovieList([...movieList,newMovie]);
     
-    fetch(`https://62a970b0ec36bf40bdb78a88.mockapi.io/movies`, 
+    fetch(`${API}/movies`, 
      {
       method: "POST",
       body:JSON.stringify(newMovie),
@@ -66,6 +67,9 @@ return(
 <form onSubmit={handleSubmit} className="add-movie-form">
     <TextField id="standard-basic" label="Name" variant="standard" name="name" value={values.name} onChange={handleChange} onBlur={handleBlur}/>
     {touched.name && errors.name ? errors.name : ""}
+    {touched.name ? errors.name : ""}
+    {touched.name ? errors.name : errors.name}
+    this both code gives us same output, can we avoid && errors.name
     <TextField id="standard-basic" label="Poster" variant="standard" name="poster" value={values.poster} onChange={handleChange} onBlur={handleBlur}/>
     {touched.poster && errors.poster ? errors.poster : ""}
     <TextField id="standard-basic" label="Rating" variant="standard" name="rating" value={values.rating} onChange={handleChange} onBlur={handleBlur}/>

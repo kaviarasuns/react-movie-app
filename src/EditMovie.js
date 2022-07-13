@@ -5,6 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useFormik } from 'formik';
 import * as yup from "yup";
+import { API } from "./global.js"
 
 const movieValidationSchema = yup.object({
       name: yup.string().required("Why not fill this name?"), 
@@ -24,7 +25,7 @@ export function EditMovie(){
   const [movie, setMovie] = useState(null);
 
   const getMovie = () => {
-    fetch(`https://62a970b0ec36bf40bdb78a88.mockapi.io/movies/${id}`, {
+    fetch(`${API}/movies/${id}`, {
       method: "GET",
     }).then((data) => data.json()).then((mv) => setMovie(mv));
   };
@@ -74,7 +75,7 @@ function EditMovieForm({movie}){
     // };
     // setMovieList([...movieList,newMovie]);
     
-    fetch(`https://62a970b0ec36bf40bdb78a88.mockapi.io/movies/${movie.id}`, 
+    fetch(`${API}/movies/${movie.id}`, 
      {
       method: "PUT",
       body:JSON.stringify(newMovie),
@@ -143,7 +144,7 @@ function EditMovieForm({movie}){
 //   const [movie, setMovie] = useState(null);
 
 //   const getMovie = () => {
-//     fetch(`https://62a970b0ec36bf40bdb78a88.mockapi.io/movies/${id}`, {
+//     fetch(`${API}/movies/${id}`, {
 //       method: "GET",
 //     }).then((data) => data.json()).then((mv) => setMovie(mv));
 //   };
@@ -177,7 +178,7 @@ function EditMovieForm({movie}){
 //     };
 //     // setMovieList([...movieList,newMovie]);
     
-//     fetch(`https://62a970b0ec36bf40bdb78a88.mockapi.io/movies/${movie.id}`, 
+//     fetch(`${API}/movies/${movie.id}`, 
 //      {
 //       method: "PUT",
 //       body:JSON.stringify(newMovie),

@@ -6,6 +6,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import SendIcon from '@mui/icons-material/Send';
 import Stack from '@mui/material/Stack';
 import { useState, useEffect } from "react";
+import { API } from "./global.js"
 
 export function MovieDetails({movieList}) {
   const { id } = useParams();
@@ -15,7 +16,7 @@ export function MovieDetails({movieList}) {
   const [movie, setMovie] = useState({});
 
   const getMovie = () => {
-    fetch(`https://62a970b0ec36bf40bdb78a88.mockapi.io/movies/${id}`, {
+    fetch(`${API}/movies/${id}`, {
       method: "GET",
     }).then((data) => data.json()).then((mv) => setMovie(mv));
   };
