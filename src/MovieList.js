@@ -25,9 +25,9 @@ export function MovieList() {
           <Movie
             movieList={movieList}
             setMovieList={setMovieList}
-            key={mv.id}
+            key={mv._id}
             movie={mv}
-            id={mv.id}
+            id={mv._id}
             getMovies={getMovies}
           />
         )).reverse()}

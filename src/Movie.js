@@ -35,7 +35,7 @@ export function Movie({mv ,movie, id, movieList, setMovieList, getMovies }) {
   // };
 
   const deleteMovie = () => {
-    fetch(`${API}/movies/${movie.id}`,{ method: "DELETE",})
+    fetch(`${API}/movies/${movie._id}`,{ method: "DELETE",})
     .then(() => getMovies( ));
   }
 
@@ -88,7 +88,7 @@ export function Movie({mv ,movie, id, movieList, setMovieList, getMovies }) {
         <IconButton color="primary" aria-label="Movie details">
           <Badge color="error">
             <EditIcon
-              onClick={() => navigate(`/movies/edit/${movie.id}`)}
+              onClick={() => navigate(`/movies/edit/${movie._id}`)}
               className="edit-icon"
               color="success"
             />
